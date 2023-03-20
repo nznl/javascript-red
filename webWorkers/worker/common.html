@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click Me</button></button>
+    <script type="module">
+        // function sleep(wait = 5000) {
+        //     const now = new Date();
+        //     while (new Date() - now < wait) {
+
+        //     }
+        // }
+        // sleep();
+        // document.addEventListener.call(document.querySelector('button'), 'click', () => {
+        //     alert('点击我');
+        // })
+        const worker = new Worker('./worker.js', { name: 'my-worker' });
+        worker.postMessage({ name: '主线程数据'})
+        // 主线程注册子线程的 postmessage 数据回调
+        worker.onmessage = ({ data }) => {
+            console.log('来自子线程 worker 的数据', data)
+        }
+        document.addEventListener.call(document.querySelector('button'), 'click', () => {
+            alert('点击我');
+        });
+    </script>
+</body>
+</html>

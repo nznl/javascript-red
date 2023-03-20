@@ -1,0 +1,56 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: WuGuang
+-->
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: WuGuang
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background: red;
+            cursor: pointer;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script type="module">
+        // const lis = document.querySelectorAll('ul li');
+        // // console.log(lis, 'lis');
+        // // lis.forEach(item => {
+        // //     item.onclick = function (e) {
+        // //         console.log(e, 'e');
+        // //     }
+        // // })
+        // // for (let i = 0 , len = lis.length; i < len; i++) {
+        // //     lis[i].addEventListener('click', (e) => {
+        // //         console.log(e.target.nodeName)
+        // //     }, false);
+        // // }
+        const obj = {};
+        Object.defineProperty(obj, 'prop', {
+            value: '22'
+        });
+        console.log(obj)
+    </script>
+</body>
+</html>

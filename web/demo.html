@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>click</button>
+</body>
+<script>
+        
+    // window.onload = (function() {
+    //     const list = [5,4,3,2,1];
+    // const ul = document.createElement('ul');
+    // for(let item of list) {
+    //     // ul.appendChild(document.createElement('li').innerText = item);
+    //     const li = document.createElement('li');
+    //     li.innerText = item;
+    //     ul.appendChild(li);
+    //     console.log(item)
+    // } 
+    // })()
+    document.querySelector('button').onclick = function() {
+                const list = [5,4,3,2,1];
+    const ul = document.createElement('ul');
+    for(let item of list) {
+        // ul.appendChild(document.createElement('li').innerText = item);
+        const li = document.createElement('li');
+        li.innerText = item;
+        ul.appendChild(li);
+        console.log(item)
+    } 
+    }
+</script>
+</html>

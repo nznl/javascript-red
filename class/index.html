@@ -1,0 +1,64 @@
+<!--
+ * @Author: WuGuang
+ * @Date: 2022-08-01 09:06:19
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by KYNY, All Rights Reserved. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="./class.js"></script> -->
+    <title>class</title>
+</head>
+<body>
+    <script type="module">
+        // import testData, { Car, CarSon } from './class.js'
+        // const test1 = new Car('blue', 28);
+        // const test2 = new CarSon('yellow', '29', 'red');
+        // test1.test();
+        // test2.test();
+        // test2.sonPrivate()
+        // function setTimeoutAsync(timeout) {
+        // return new Promise((resolve) => {
+        //     setTimeout(() => {
+        //         console.log(123)
+        //     resolve();
+        //     }, timeout);
+        // });
+        // }
+        // // Waits for timeout - no error thrown
+        // await setTimeoutAsync(1000);
+        // console.log(testData.arr.at(-1), testData.str.at(0));
+        // const str = 'sun and moon';
+        // const regex = /and/d;
+        // const matchObj = regex.exec(str);
+        // // [ 'and', index: 4, input: 'sun and moon', groups: undefined ]
+        // console.log(matchObj);
+        // console.log(testData.arr.findLast(item => item === 'b'))
+        // const reg = /[and]/;
+        // const str = "er";
+        // console.log(reg.test(str));
+        console.log(10000 - 120 - 760)
+        class Polygon {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+                this.area = this.height * this.width;
+            }
+        }
+        class Son extends Polygon {
+            constructor(a,b, i) {
+                super(...arguments);
+                this.i = i;
+            }
+        }
+        const polygon = new Son(40, 50, 'test');
+        console.log(polygon.area, polygon.i)
+    </script>
+</body>
+</html>

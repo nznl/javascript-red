@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document</title>
+</head>
+
+<body>
+  <button onclick="play()">播放</button>
+  <script>
+    var utterThis = new SpeechSynthesisUtterance();
+    utterThis.text = "到哪里了";
+    utterThis.volume = 1; // 声音的音量 范围是0到1
+    utterThis.rate = 0.7; //语速，数值，默认值是1，范围是0.1到10
+    utterThis.pitch = 1;
+    const play = () => {
+      speechSynthesis.speak(utterThis);
+    }
+  </script>
+</body>

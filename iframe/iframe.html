@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+        /* .h-full {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+        }
+        #bi_iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        } */
+    </style>
+</head>
+<body>
+    <div class="h-full">
+        <iframe 
+            src="https://www.naiveui.com/zh-CN/os-theme/components/button" 
+            frameborder="0"
+            id="bi_iframe"
+            scrolling="auto"
+        >
+        </iframe>
+
+    </div>
+    <script>
+        const bi_iframe = document.getElementById('bi_iframe');
+        console.log(bi_iframe.clientHeight, bi_iframe.scrollHeight, bi_iframe.scrollTop, 'bi_iframe')
+    </script>
+</body>
+</html>

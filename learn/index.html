@@ -1,0 +1,58 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: WuGuang
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+       import('./index.js').then(res => {
+           const tool = new res.default();
+           console.log(tool.request)
+           res.ceshi()
+       })
+    //    function testPromise(p) {
+    //        return new Promise((resolve, reject) => {
+    //            if (p === 1) {
+    //                setTimeout(() => {
+    //                    console.log(234)
+    //                }, 3000)
+    //                setTimeout(() => {
+    //                 resolve('123');
+    //                }, 1000)
+                  
+    //            } else {
+    //                reject(321);
+    //            }
+    //        })
+    //    }
+    //    testPromise(1).then(res => {
+    //        console.log(res);
+    //    }).then(
+           
+    //    )
+    function chainOption() {
+      return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('123')
+            }, 2000)
+        })
+    }
+    chainOption().then(res => {
+        console.log(res);
+        return new Promise((resolve, reject) => {
+            resolve('321')
+        }, 1000)
+    }).then(res => {
+        console.log(res, '---')
+    })
+    </script>
+</body>
+</html>
